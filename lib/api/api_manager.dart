@@ -1,10 +1,9 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
-import 'package:movies_app/model/TopRatedResponse.dart';
-import 'package:movies_app/model/UpComingResponse.dart';
+import '../model/DiscoverResponse.dart';
 import '../model/PopularResponse.dart';
 import 'api_constants.dart';
+import '../model/searchResponse.dart';
 
 class ApiManager{
 
@@ -23,8 +22,8 @@ class ApiManager{
     }
   }
 
-  static Future<UpComingResponse> getNewRelease() async {
-    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.upComingUrl, {
+  static Future<DiscoverResponse> getNewRelease() async {
+    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.discoverUrl, {
       'api_key': '6b6055cc2c88703b542b7633d9d828a7',
       'primary_release_year': '${DateTime.now().year}'
     });
@@ -32,15 +31,15 @@ class ApiManager{
       var response = await http.get(url);
       var bodyString = response.body;
       var json = jsonDecode(bodyString);
-      var object = UpComingResponse.fromJson(json);
+      var object = DiscoverResponse.fromJson(json);
       return object;
     } catch (e) {
       throw e;
     }
   }
 
-  static Future<TopRatedResponse> getRecommend() async {
-    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.topRatedUrl, {
+  static Future<DiscoverResponse> getRecommend() async {
+    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.discoverUrl, {
       'api_key': '6b6055cc2c88703b542b7633d9d828a7',
       'sort_by': 'vote_average.desc',
       'vote_count.gte': '200'
@@ -49,10 +48,23 @@ class ApiManager{
       var response = await http.get(url);
       var bodyString = response.body;
       var json = jsonDecode(bodyString);
-      var object = TopRatedResponse.fromJson(json);
+      var object = DiscoverResponse.fromJson(json);
       return object;
     } catch (e) {
       throw e;
     }
   }
+  static Future<SearchResponse?> Search({String? query}) async {
+    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.SearchUrl,
+        {"api_key": "001980e37e125ade2ff7f7ff71d9e93a", "query": query});
+    try {
+      var response = await http.get(url);
+      var bodyString = response.body;
+      var json = jsonDecode(bodyString);
+      return SearchResponse.fromJson(json);
+    } catch (e) {
+      throw e;
+    }
+  }
+
 }

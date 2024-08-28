@@ -12,7 +12,7 @@ class PopularSliderViewModel extends ChangeNotifier{
     errorMessage=null;
     notifyListeners();
     try{
-      var response=await ApiManager.getPopularApi();
+      var response=await ApiManage.getPopularApi();
       if(response.status_code==7){
         errorMessage=response.status_message;
       }else{

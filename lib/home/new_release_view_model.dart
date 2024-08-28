@@ -10,7 +10,7 @@ class NewReleaseViewModel extends ChangeNotifier{
     newReleaseList=null;
     notifyListeners();
     try{
-      var response=await ApiManager.getNewRelease();
+      var response=await ApiManage.getNewRelease();
       if(response.status_code==7){
         errorMessage=response.status_message;
       }else {

@@ -12,7 +12,7 @@ class SearchDelegateViewModel extends ChangeNotifier{
     errorMessage = null;
     notifyListeners();
     try{
-      var response = await ApiManage.Search(query: query);
+      var response = await ApiManager.Search(query: query);
       if(response?.status_code ==7){
         errorMessage = response?.status_message;
       }
