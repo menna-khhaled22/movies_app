@@ -7,7 +7,7 @@ import 'package:movies_app/model/MovieGenreResponse.dart';
 import '../model/MovieDetailsResponse.dart';
 class ApiManagerr {
   static Future<MovieGenreResponse?> getMoviesGenres()async{
-    Uri url = Uri.https(ApiConstants.baseUrl , ApiConstants.movieGenreApi ,
+    Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieGenreApi ,
         {
           'api_key': '021a5163f6d9c38b567e24506fd38192'
 
@@ -24,7 +24,7 @@ class ApiManagerr {
 
   }
   static Future<MovieDetailsResponse?> getMovieByGenreId(String genre_id)async{
-    Uri url = Uri.https(ApiConstants.baseUrl , ApiConstants.movieDetailsApi ,
+    Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieDetailsApi ,
         {
           'api_key':'021a5163f6d9c38b567e24506fd38192',
           'sort_by' : 'vote_count.desc',
