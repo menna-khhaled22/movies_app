@@ -67,7 +67,7 @@ class _NewReleaseState extends State<NewRelease> {
                       itemBuilder: (context, index) {
                         return Padding(
                           padding:
-                          EdgeInsets.only(left: 14 , right: 10 , bottom: 8),
+                          EdgeInsets.only(left: 14 , right: 14 , bottom: 8),
                           child: MovieItem(
                               movie:
                               viewModel.newReleaseList![index]

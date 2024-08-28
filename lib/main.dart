@@ -5,6 +5,8 @@ import 'package:movies_app/home/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:movies_app/model/added_movie_provider.dart';
 import 'package:provider/provider.dart';
+
+import 'home/movie_details/movie_details_tab.dart';
 // import 'firebase_options.dart';
 
 void main() async{
@@ -40,7 +42,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      initialRoute: HomeScreen.routeName,
+      routes: {
+        MovieDetailsTab.routeName:(context) => MovieDetailsTab(),
+        HomeScreen.routeName:(context) => HomeScreen(),
+},
     );
   }
 }

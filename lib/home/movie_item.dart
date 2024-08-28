@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 import '../model/PopularResponse.dart';
 import '../model/added_movie_provider.dart';
+import 'movie_details/movie_details_tab.dart';
 
 class MovieItem extends StatefulWidget {
   Results movie;
@@ -36,7 +37,7 @@ class _MovieItemState extends State<MovieItem> {
     var provider = Provider.of<AddedMovieProvider>(context);
     return InkWell(
       onTap: (){
-        // Navigator.of(context).pushNamed(MovieDetailsTab.routeName,arguments:widget.movie );
+        Navigator.of(context).pushNamed(MovieDetailsTab.routeName,arguments:widget.movie );
       },
       child: Padding(
         padding: const EdgeInsets.only(top: 15),
