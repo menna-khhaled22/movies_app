@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:movies/Home/movie-item.dart';
-// import 'package:movies/movie_details/movie_details_tap.dart';
 import 'package:provider/provider.dart';
 import '../my_theme_data.dart';
 import 'movie_item.dart';
@@ -29,7 +27,7 @@ class _NewReleaseState extends State<NewRelease> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
             child: Text(
               'New Releases ',
               style: Theme.of(context).textTheme.titleMedium!.copyWith(color: MyTheme.whiteColor, fontSize: 22),
@@ -69,7 +67,7 @@ class _NewReleaseState extends State<NewRelease> {
                       itemBuilder: (context, index) {
                         return Padding(
                           padding:
-                          EdgeInsets.only(bottom: 15, left: 5, right: 10),
+                          EdgeInsets.only(left: 14 , right: 10 , bottom: 8),
                           child: MovieItem(
                               movie:
                               viewModel.newReleaseList![index]

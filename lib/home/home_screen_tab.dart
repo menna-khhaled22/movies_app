@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/home/popular_slider.dart';
+import 'package:movies_app/home/recommended.dart';
 
 import 'new_release.dart';
 // import 'package:movies/Home/new_release.dart';
@@ -23,7 +24,7 @@ class _HomeScreenTabState extends State<HomeScreenTab> {
           PopularSlider(),
           NewRelease(),
           SizedBox(height:MediaQuery.sizeOf(context).height*0.03,),
-          // Recommended(),
+          Recommended(),
           SizedBox(height:MediaQuery.sizeOf(context).height*0.03,),
         ],
       ),
