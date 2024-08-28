@@ -41,7 +41,7 @@ class _PopularItemState extends State<PopularItem> {
             // padding: EdgeInsets.symmetric(vertical:MediaQuery.sizeOf(context).height*0.15,horizontal:MediaQuery.sizeOf(context).width*0.04),
             child: Stack(
               children: [
-                // MovieItem(movie:widget.index),
+                MovieItem(movie:widget.index),
                 Padding(
                   padding: EdgeInsets.only(
                       top: MediaQuery.sizeOf(context).height * 0.21,
