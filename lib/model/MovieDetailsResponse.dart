@@ -1,4 +1,3 @@
-import 'package:movies_app/model/PopularResponse.dart';
 
 import 'PopularResponse.dart';
 
