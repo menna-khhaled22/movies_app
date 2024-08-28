@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/Api/api_manage.dart';
 import 'package:movies_app/Api/api_manager.dart';
-import '../model/UpComingResponse.dart';
+import '../model/PopularResponse.dart';
 
 class NewReleaseViewModel extends ChangeNotifier{
   List<Results>? newReleaseList;
