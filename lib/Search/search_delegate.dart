@@ -120,7 +120,7 @@ class searchDelegate extends SearchDelegate {
     return ThemeData(
       scaffoldBackgroundColor: MyTheme.primaryColor,
       textTheme: TextTheme(
-        headline6: TextStyle(fontSize: 24.0, color: MyTheme.whiteColor),
+        headlineMedium:TextStyle(fontSize: 24.0, color: MyTheme.whiteColor),
       ),
       appBarTheme: AppBarTheme(
         backgroundColor: MyTheme.greyColor,
