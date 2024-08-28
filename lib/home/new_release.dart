@@ -23,7 +23,7 @@ class _NewReleaseState extends State<NewRelease> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.sizeOf(context).height * 0.38,
+      height: MediaQuery.sizeOf(context).height * 0.35,
       color: MyTheme.greyColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -32,11 +32,11 @@ class _NewReleaseState extends State<NewRelease> {
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             child: Text(
               'New Releases ',
-              style: Theme.of(context).textTheme.titleMedium!.copyWith(color: MyTheme.whiteColor, fontSize: 20),
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(color: MyTheme.whiteColor, fontSize: 22),
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 2,
           ),
           ChangeNotifierProvider(
             create: (context) => viewModel,
@@ -70,10 +70,12 @@ class _NewReleaseState extends State<NewRelease> {
                         return Padding(
                           padding:
                           EdgeInsets.only(bottom: 15, left: 5, right: 10),
-                          // child: MovieItem(
-                          //     movie:
-                          //     viewModel.newReleaseList![index]),
+                          child: MovieItem(
+                              movie:
+                              viewModel.newReleaseList![index]
+                              ),
                         );
+                        // viewModel.newReleaseList![index]
                         // child: InkWell(
                         //   onTap: (){
                         //
