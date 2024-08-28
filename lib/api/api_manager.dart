@@ -1,57 +1,43 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:movies_app/model/TopRatedResponse.dart';
-import 'package:movies_app/model/UpComingResponse.dart';
-import '../model/PopularResponse.dart';
-import 'api_constants.dart';
+import 'package:movies_app/api/api_constants.dart';
+import 'package:movies_app/model/MovieGenreResponse.dart';
 
-class ApiManager{
+import '../model/MovieDetailsResponse.dart';
+class ApiManager {
+  static Future<MovieGenreResponse?> getMoviesGenres()async{
+    Uri url = Uri.https(ApiConstants.baseUrl , ApiConstants.movieGenreApi ,
+        {
+          'api_key': '021a5163f6d9c38b567e24506fd38192'
 
-  static Future<PopularResponse> getPopularApi() async {
-    ///https://api.themoviedb.org/3/movie/popular?language=en-US&page=1'
-    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.popularUrl,
-        {'api_key': '6b6055cc2c88703b542b7633d9d828a7'});
-    try {
+        });
+    try{
       var response = await http.get(url);
       var bodyString = response.body;
       var json = jsonDecode(bodyString);
-      var object = PopularResponse.fromJson(json);
-      return object;
-    } catch (e) {
+      return MovieGenreResponse.fromJson(json);
+    }
+    catch(e){
       throw e;
     }
-  }
 
-  static Future<UpComingResponse> getNewRelease() async {
-    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.upComingUrl, {
-      'api_key': '6b6055cc2c88703b542b7633d9d828a7',
-      'primary_release_year': '${DateTime.now().year}'
-    });
-    try {
+  }
+  static Future<MovieDetailsResponse?> getMovieByGenreId(String genre_id)async{
+    Uri url = Uri.https(ApiConstants.baseUrl , ApiConstants.movieDetailsApi ,
+        {
+          'api_key':'021a5163f6d9c38b567e24506fd38192',
+          'sort_by' : 'vote_count.desc',
+          'with_genres': genre_id
+        });
+
+    try{
       var response = await http.get(url);
       var bodyString = response.body;
       var json = jsonDecode(bodyString);
-      var object = UpComingResponse.fromJson(json);
-      return object;
-    } catch (e) {
-      throw e;
+      return MovieDetailsResponse.fromJson(json);
     }
-  }
-
-  static Future<TopRatedResponse> getRecommend() async {
-    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.topRatedUrl, {
-      'api_key': '6b6055cc2c88703b542b7633d9d828a7',
-      'sort_by': 'vote_average.desc',
-      'vote_count.gte': '200'
-    });
-    try {
-      var response = await http.get(url);
-      var bodyString = response.body;
-      var json = jsonDecode(bodyString);
-      var object = TopRatedResponse.fromJson(json);
-      return object;
-    } catch (e) {
+    catch(e){
       throw e;
     }
   }
