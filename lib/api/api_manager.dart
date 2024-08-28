@@ -40,5 +40,5 @@ class ApiManager {
     catch(e){
       throw e;
     }
-  }
-}
+  }}
+
