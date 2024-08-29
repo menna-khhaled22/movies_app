@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:movies/Model/added_movie_provider.dart';
-// import 'package:movies/Model/firebase_utils.dart';
-// import 'package:movies/movie_details/movie_details_tap.dart';
 import 'package:provider/provider.dart';
 
 import '../model/PopularResponse.dart';

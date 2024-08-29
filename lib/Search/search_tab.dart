@@ -30,7 +30,7 @@ class SearchTab extends StatelessWidget {
               children: [
                 Icon(Icons.search_rounded,color: MyTheme.iconColor,),
                 SizedBox(width: 10,),
-                Text("Search", style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 18),textAlign: TextAlign.left,),
+                Text("Search", style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 18, color: MyTheme.iconColor),textAlign: TextAlign.left,),
               ],
             ),
           ),

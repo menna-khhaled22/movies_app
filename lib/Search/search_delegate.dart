@@ -13,7 +13,7 @@ class searchDelegate extends SearchDelegate {
     // TODO: implement buildActions
     return [
       IconButton(
-          onPressed: () => showResults(context), icon: Icon(Icons.search)),
+          onPressed: () => showResults(context), icon: Icon(Icons.search, color: MyTheme.greyText,)),
     ];
   }
 
@@ -24,7 +24,7 @@ class searchDelegate extends SearchDelegate {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.close)),
+          icon: Icon(Icons.close , color: MyTheme.whiteColor,)),
     );
   }
 
@@ -43,7 +43,7 @@ class searchDelegate extends SearchDelegate {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/movieIcon.png"),
+              Image.asset("assets/images/movieIcon.png"),
               SizedBox(
                 height: 14,
               ),

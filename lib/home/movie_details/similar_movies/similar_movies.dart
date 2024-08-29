@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/home/movie_details/similar_movies/similar_movies_view_model.dart';
 import 'package:provider/provider.dart';
@@ -29,7 +28,7 @@ class _SimilarMoviesState extends State<SimilarMovies> {
       decoration: BoxDecoration(
         color: MyTheme.greyColor,
       ),
-      height:MediaQuery.sizeOf(context).height*0.52,
+      height:MediaQuery.sizeOf(context).height*0.55,
       child: ChangeNotifierProvider(
         create: (context) => widget.similarMovieViewModel,
         child: Column(

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/home/recommended_item.dart';
-// import 'package:movies/Api/api_manage.dart';
-// import 'package:movies/Home/movie-item.dart';
-// import 'package:movies/Home/recommend_item.dart';
 import 'package:movies_app/home/recommended_view_model.dart';
 import 'package:provider/provider.dart';
 import '../my_theme_data.dart';
@@ -29,7 +26,7 @@ class _RecommendedState extends State<Recommended> {
         borderRadius: BorderRadius.circular(7),
         color: MyTheme.greyColor,
       ),
-      height:MediaQuery.sizeOf(context).height*0.52,
+      height:MediaQuery.sizeOf(context).height*0.55,
 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
