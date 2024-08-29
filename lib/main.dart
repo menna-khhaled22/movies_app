@@ -7,6 +7,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:movies_app/model/added_movie_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'Search/search_delegate_view_model.dart';
 import 'home/movie_details/movie_details_tab.dart';
 // import 'firebase_options.dart';
 
@@ -25,7 +26,8 @@ void main() async{
   runApp(MultiProvider(
       providers: [
         ChangeNotifierProvider(
-            create: (context) => AddedMovieProvider(),
+            create: (context) => AddedMovieProvider(),)
+  ,   ChangeNotifierProvider(create:(context) =>SearchDelegateViewModel(),
         ),
       ],child: MyApp(),
   )
