@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/Api/api_manager.dart';
+
 import 'package:movies_app/Api/api_manager.dart';
 import '../model/PopularResponse.dart';
 

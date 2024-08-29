@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:movies_app/model/PopularResponse.dart';
 import '../my_theme_data.dart';
-
+import '../model/added_movie_provider.dart';
+import 'package:movies_app/home/movie_item.dart';
 class WatchTab extends StatefulWidget {
   static const routeName = 'watchlist';
 
@@ -27,7 +29,7 @@ class _WatchTabState extends State<WatchTab> {
                 top: MediaQuery.sizeOf(context).height * 0.08),
             child: Text(
               'Watchlist',
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(color:MyTheme.whiteColor,),
             ),
           ),
           Expanded(
@@ -57,7 +59,7 @@ class _WatchTabState extends State<WatchTab> {
                               ),
                               SizedBox(height: 10,),
                               Text(provider.watchListMovie[index].releaseDate!,style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.iconColor,fontSize: 13),),
-                              // Text(provider.watchListMovie[index].!,style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.iconColor,fontSize: 13),)
+                               //Text(provider.watchListMovie[index],style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.whiteColor,fontSize: 13),)
                             ],
                           ),
                         ),
