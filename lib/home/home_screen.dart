@@ -4,9 +4,10 @@ import '../my_theme_data.dart';
 import 'home_screen_tab.dart';
 import 'package:movies_app/watchList/watch_list.dart';
 import 'package:movies_app/Browser/browser_tab.dart';
+import 'package:movies_app/Search/search_tab.dart';
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home_screen';
-  List<Widget>tabs=[HomeScreenTab(),BrowserTab(),WatchTab()];
+  List<Widget>tabs=[HomeScreenTab(),SearchTab(),BrowserTab(),WatchTab()];
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
