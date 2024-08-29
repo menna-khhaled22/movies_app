@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:movies_app/watchList/watch_list.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/home/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -46,6 +46,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         MovieDetailsTab.routeName:(context) => MovieDetailsTab(),
         HomeScreen.routeName:(context) => HomeScreen(),
+        WatchTab.routeName:(context) => WatchTab(),
 },
     );
   }
