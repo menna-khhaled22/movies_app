@@ -40,7 +40,7 @@ class _RecommendItemState extends State<RecommendItem> {
             children: [
               MovieItem(movie: widget.movie),
               SizedBox(
-                height: 10,
+                height: MediaQuery.sizeOf(context).height * 0.01,
               ),
               Row(
                 children: [
@@ -49,7 +49,7 @@ class _RecommendItemState extends State<RecommendItem> {
                     color: MyTheme.yellowColor,
                   ),
                   SizedBox(
-                    width: 5,
+                    width: MediaQuery.sizeOf(context).width * 0.02,
                   ),
                   Text(
                     widget.movie.voteAverage.toString(),
@@ -58,7 +58,7 @@ class _RecommendItemState extends State<RecommendItem> {
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: MediaQuery.sizeOf(context).height * 0.01,
               ),
               Text(
                 '${widget.movie.title}',
@@ -68,7 +68,7 @@ class _RecommendItemState extends State<RecommendItem> {
                     .copyWith(color: MyTheme.whiteColor),
               ),
               SizedBox(
-                height: 10,
+                height: MediaQuery.sizeOf(context).height * 0.01,
               ),
               Text(
                 widget.movie.releaseDate!,

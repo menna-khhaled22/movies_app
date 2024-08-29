@@ -82,7 +82,7 @@ class _MovieDetailsTabState extends State<MovieDetailsTab> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: MediaQuery.sizeOf(context).height * 0.01,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10),
@@ -93,7 +93,7 @@ class _MovieDetailsTabState extends State<MovieDetailsTab> {
                         .copyWith(fontSize: 12, color: MyTheme.iconColor)),
               ),
               SizedBox(
-                height: 10,
+                height: MediaQuery.sizeOf(context).height * 0.01
               ),
               Row(
                 children: [
@@ -138,13 +138,13 @@ class _MovieDetailsTabState extends State<MovieDetailsTab> {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: MediaQuery.sizeOf(context).height * 0.01,
                         ),
                         Row(
                           children: [
                             Image.asset("assets/images/star.png"),
                             SizedBox(
-                              width: 10,
+                              width: MediaQuery.sizeOf(context).width * 0.02,
                             ),
                             Text(
                               "${result?.voteAverage}",
@@ -153,7 +153,7 @@ class _MovieDetailsTabState extends State<MovieDetailsTab> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: MediaQuery.sizeOf(context).height * 0.01,
                         ),
                       ],
                     ),
@@ -161,7 +161,7 @@ class _MovieDetailsTabState extends State<MovieDetailsTab> {
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: MediaQuery.sizeOf(context).height * 0.01,
               ),
               SimilarMovies(movie: result!),
             ],

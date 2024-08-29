@@ -29,18 +29,18 @@ class _SimilarMoviesState extends State<SimilarMovies> {
       decoration: BoxDecoration(
         color: MyTheme.greyColor,
       ),
-      height:MediaQuery.sizeOf(context).height*0.56,
+      height:MediaQuery.sizeOf(context).height*0.52,
       child: ChangeNotifierProvider(
         create: (context) => widget.similarMovieViewModel,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 20,),
+            SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: Text("More Like this",style: Theme.of(context).textTheme.titleLarge!.copyWith(color: MyTheme.whiteColor)),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: MediaQuery.sizeOf(context).height * 0.02,),
 
             Consumer<SimilarMovieViewModel>(builder: (context,similarMovieViewModel,child){
               if(similarMovieViewModel.errorMessage != null){

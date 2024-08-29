@@ -75,7 +75,7 @@ class ApiManager{
 
   static Future<SimilarResponse?> getSimilarMovies({required num? id}) async {
     Uri url = Uri.https(ApiConstant.baseUrl, "/3/movie/$id/similar",
-        {"api_key": "001980e37e125ade2ff7f7ff71d9e93a", 'movie_id': '$id'});
+        {"api_key": "6b6055cc2c88703b542b7633d9d828a7", 'movie_id': '$id'});
     try {
       var response = await http.get(url);
       var bodyString = response.body;
