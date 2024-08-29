@@ -76,7 +76,7 @@ class ApiManager{
 
   static Future<SimilarResponse?> getSimilarMovies({required num? id}) async {
     Uri url = Uri.https(ApiConstant.baseUrl, "/3/movie/$id/similar",
-        {"api_key": "001980e37e125ade2ff7f7ff71d9e93a", 'movie_id': '$id'});
+        {"api_key": "6b6055cc2c88703b542b7633d9d828a7", 'movie_id': '$id'});
     try {
       var response = await http.get(url);
       var bodyString = response.body;
@@ -90,7 +90,7 @@ class ApiManager{
   static Future<MovieGenreResponse?> getMoviesGenres()async{
     Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieGenreApi ,
         {
-          'api_key': '2035a009e117e25110c244f3b40b539a'
+          'api_key': '6b6055cc2c88703b542b7633d9d828a7'
 
         });
     try{
@@ -108,7 +108,7 @@ class ApiManager{
   static Future<MovieDetailsResponse?> getMovieByGenreId(String genre_id)async{
     Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieDetailsApi ,
         {
-          'api_key':'2035a009e117e25110c244f3b40b539a',
+          'api_key':'6b6055cc2c88703b542b7633d9d828a7',
           'sort_by' : 'vote_count.desc',
           'with_genres': genre_id
         });
