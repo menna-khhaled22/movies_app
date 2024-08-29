@@ -4,4 +4,5 @@ class ApiConstant {
   static const discoverUrl = '/3/discover/movie';
   static const String movieGenreApi = '/3/genre/movie/list';
   static const String movieDetailsApi = '/3/discover/movie';
+  static const SearchUrl ='/3/search/movie';
 }

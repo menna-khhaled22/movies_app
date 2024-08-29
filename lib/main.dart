@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:movies_app/Search/search_tab.dart';
 import 'package:movies_app/watchList/watch_list.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/home/home_screen.dart';
@@ -47,6 +48,7 @@ class _MyAppState extends State<MyApp> {
         MovieDetailsTab.routeName:(context) => MovieDetailsTab(),
         HomeScreen.routeName:(context) => HomeScreen(),
         WatchTab.routeName:(context) => WatchTab(),
+        SearchTab.routeName:(context)=> SearchTab()
 },
     );
   }

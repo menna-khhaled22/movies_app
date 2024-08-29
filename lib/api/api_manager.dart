@@ -7,6 +7,7 @@ import '../model/PopularResponse.dart';
 import 'api_constants.dart';
 import 'package:movies_app/model/MovieGenreResponse.dart';
 import 'package:movies_app/model/MovieDetailsResponse.dart';
+import 'package:movies_app/model/searchResponse.dart';
 class ApiManager{
 
   static Future<PopularResponse> getPopularApi() async {
@@ -120,6 +121,18 @@ class ApiManager{
       return MovieDetailsResponse.fromJson(json);
     }
     catch(e){
+      throw e;
+    }
+  }
+  static Future<SearchResponse?> Search({String? query}) async {
+    Uri url = Uri.https(ApiConstant.baseUrl, ApiConstant.SearchUrl,
+        {"api_key": "001980e37e125ade2ff7f7ff71d9e93a", "query": query});
+    try {
+      var response = await http.get(url);
+      var bodyString = response.body;
+      var json = jsonDecode(bodyString);
+      return SearchResponse.fromJson(json);
+    } catch (e) {
       throw e;
     }
   }
