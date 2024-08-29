@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import '../my_theme_data.dart';
 import 'home_screen_tab.dart';
+import 'package:movies_app/Browser/browser_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home_screen';
-  List<Widget>tabs=[HomeScreenTab()];
+  List<Widget>tabs=[HomeScreenTab(),BrowserTab()];
   // ,SearchTab(),BrowserTab(),WatchTab()
 
   @override

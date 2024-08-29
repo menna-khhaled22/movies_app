@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/movie_details/movie_details_tap.dart';
+import 'package:movies_app/home/movie_details/movie_details_tab.dart';
 // import '../../model/MovieDetailsResponse.dart';
 import 'package:movies_app/Model/popular_response.dart';
 

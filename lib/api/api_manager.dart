@@ -5,7 +5,8 @@ import '../model/DetailsResponses.dart';
 import '../model/DiscoverResponse.dart';
 import '../model/PopularResponse.dart';
 import 'api_constants.dart';
-
+import 'package:movies_app/model/MovieGenreResponse.dart';
+import 'package:movies_app/model/MovieDetailsResponse.dart';
 class ApiManager{
 
   static Future<PopularResponse> getPopularApi() async {
@@ -82,6 +83,43 @@ class ApiManager{
       var json = jsonDecode(bodyString);
       return SimilarResponse.fromJson(json);
     } catch (e) {
+      throw e;
+    }
+  }
+
+  static Future<MovieGenreResponse?> getMoviesGenres()async{
+    Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieGenreApi ,
+        {
+          'api_key': '2035a009e117e25110c244f3b40b539a'
+
+        });
+    try{
+      var response = await http.get(url);
+      var bodyString = response.body;
+      var json = jsonDecode(bodyString);
+      return MovieGenreResponse.fromJson(json);
+    }
+    catch(e){
+      throw e;
+    }
+
+  }
+
+  static Future<MovieDetailsResponse?> getMovieByGenreId(String genre_id)async{
+    Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieDetailsApi ,
+        {
+          'api_key':'2035a009e117e25110c244f3b40b539a',
+          'sort_by' : 'vote_count.desc',
+          'with_genres': genre_id
+        });
+
+    try{
+      var response = await http.get(url);
+      var bodyString = response.body;
+      var json = jsonDecode(bodyString);
+      return MovieDetailsResponse.fromJson(json);
+    }
+    catch(e){
       throw e;
     }
   }

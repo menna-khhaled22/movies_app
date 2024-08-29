@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/api/api_manager.dart';
 import '../model/MovieGenreResponse.dart';
 
+
 class BrowserTabViewModel extends ChangeNotifier{
   List<Genres>? genreList;
   String? errorMessage;
