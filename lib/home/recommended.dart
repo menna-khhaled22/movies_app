@@ -38,7 +38,7 @@ class _RecommendedState extends State<Recommended> {
             padding:EdgeInsets.symmetric(vertical:10,horizontal:16),
             child: Text('Recommended ',style:Theme.of(context).textTheme.titleMedium!.copyWith(color: MyTheme.whiteColor , fontSize: 22),),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: MediaQuery.sizeOf(context).height * 0.01,),
           ChangeNotifierProvider(
             create:(context) => viewModel,
             child: Consumer<RecommendedViewModel>(

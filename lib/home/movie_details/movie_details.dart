@@ -101,8 +101,8 @@ class _MovieDetailsState extends State<MovieDetails> {
                       return
 
                         Container(
-                            height: 20,
-                            width: 40,
+                            height: MediaQuery.sizeOf(context).height * 0.02,
+                            width: MediaQuery.sizeOf(context).width * 0.04,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 width: 2,

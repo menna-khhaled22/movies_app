@@ -54,7 +54,7 @@ class _PopularItemState extends State<PopularItem> {
                         widget.index.title!,
                         style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize:15,color:MyTheme.whiteColor),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(height: MediaQuery.sizeOf(context).height * 0.01,),
                       Text(
                         widget.index.releaseDate!,
                         style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize:12,color:MyTheme.iconColor),

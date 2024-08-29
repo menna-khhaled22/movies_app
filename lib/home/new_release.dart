@@ -34,7 +34,7 @@ class _NewReleaseState extends State<NewRelease> {
             ),
           ),
           SizedBox(
-            height: 2,
+            height: MediaQuery.sizeOf(context).height * 0.01,
           ),
           ChangeNotifierProvider(
             create: (context) => viewModel,
