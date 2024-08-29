@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/Browser/genre_item.dart';
+import 'package:movies_app/my_theme_data.dart';
 import '../model/MovieGenreResponse.dart';
 import 'browser_tab_viewmodel.dart';
 import 'movie/movie_details.dart';
@@ -19,7 +20,7 @@ class GenreScreen extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(height: 30,),
-          Text('Browse Category' ,style: Theme.of(context).textTheme.titleLarge ),
+          Text('Browse Category' ,style: Theme.of(context).textTheme.titleLarge!.copyWith(color: MyTheme.iconColor) ),
           Expanded(
             child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2 ,

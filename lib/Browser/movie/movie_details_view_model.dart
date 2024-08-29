@@ -4,15 +4,16 @@ import '../../api/api_manager.dart';
 import 'package:movies_app/model/popular_response.dart';
 
 
+
 class MovieDetailsViewModel extends ChangeNotifier{
   List<Results>? moviesList;
   String? errorMessage;
-  void getMoviesByGenreId(String genre_id)async{
+  void getMoviesByGenreId(String genreId)async{
     moviesList = null;
     errorMessage = null;
     notifyListeners();
     try{
-      var response = await ApiManager.getMovieByGenreId(genre_id);
+      var response = await ApiManager.getMovieByGenreId(genreId);
       if(response?.success ==false){
         errorMessage= response?.status_message;
       }
