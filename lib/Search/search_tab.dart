@@ -14,7 +14,6 @@ class SearchTab extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height*.1,
           ),
-          // Container(color: Colors.red, width: 200,height: 200,),
           ElevatedButton(
             onPressed: (){
               showSearch(context: context, delegate:

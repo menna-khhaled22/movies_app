@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/api/api_manager.dart';
-import 'package:movies_app/model/searchResponse.dart';
 import 'package:movies_app/my_theme_data.dart';
-import 'package:movies_app/Search/searchItem.dart';
-import 'package:movies_app/Search/search_delegate_view_model.dart';
 import 'package:movies_app/Search/searchItem.dart';
 import 'package:movies_app/Search/search_delegate_view_model.dart';
 import 'package:provider/provider.dart';
@@ -47,14 +43,14 @@ class searchDelegate extends SearchDelegate {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/movieIcon.png"),
+            Icon( Icons.movie_creation_outlined),
               SizedBox(
                 height: 14,
               ),
               Text(
                 "No movies found",
                 style:
-                Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 18),
+                Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 18 ,color: Colors.white),
               ),
             ],
           ));

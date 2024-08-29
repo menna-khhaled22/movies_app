@@ -59,7 +59,7 @@ class _WatchTabState extends State<WatchTab> {
                               ),
                               SizedBox(height: 10,),
                               Text(provider.watchListMovie[index].releaseDate!,style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.iconColor,fontSize: 13),),
-                               //Text(provider.watchListMovie[index],style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.whiteColor,fontSize: 13),)
+                               Text(provider.watchListMovie[index].overview!,style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.whiteColor,fontSize: 13),)
                             ],
                           ),
                         ),

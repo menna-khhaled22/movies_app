@@ -22,7 +22,6 @@ class searchItem extends StatelessWidget{
         },
         child: Container(
           padding: EdgeInsets.all(3),
-          // width: MediaQuery.of(context).size.width * 0.90,
           child: Card(
             elevation: 0,
             color: Colors.transparent,

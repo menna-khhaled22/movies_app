@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:movies_app/api/api_manager.dart';
 import 'package:movies_app/model/PopularResponse.dart';
-import 'package:movies_app/api/api_manager.dart';
+
 
 class SearchDelegateViewModel extends ChangeNotifier{
   List<Results>? movieList ;
