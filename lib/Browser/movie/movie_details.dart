@@ -3,7 +3,7 @@ import 'package:movies_app/Browser/browser_tab.dart';
 import 'package:provider/provider.dart';
 import '../../my_theme_data.dart';
 import '../../model/MovieGenreResponse.dart';
-import 'movie_details_view_model.dart';
+import 'package:movies_app/Browser/movie/movie_details_view_model.dart';
 import 'movie_screen.dart';
 
 class MovieDetails extends StatefulWidget {

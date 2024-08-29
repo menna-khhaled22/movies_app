@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'movie_item.dart';
+import 'package:movies_app/Browser/movie/movie_item.dart';
 
 
 class MovieScreen extends StatelessWidget {

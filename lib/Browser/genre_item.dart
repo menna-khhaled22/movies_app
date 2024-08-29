@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/my_theme_data.dart';
 import '../model/MovieGenreResponse.dart';
 import '../model/category_image.dart';
 
@@ -19,7 +20,7 @@ class GenreItem extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Text(genreList[index].name??'', style: Theme.of(context).textTheme.titleMedium,
+              child: Text(genreList[index].name??'', style: Theme.of(context).textTheme.titleMedium!.copyWith(color: MyTheme.iconColor),
               ),
             ),
           ],

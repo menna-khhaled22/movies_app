@@ -89,7 +89,7 @@ class ApiManager{
   }
 
   static Future<MovieGenreResponse?> getMoviesGenres()async{
-    Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieGenreApi ,
+    Uri url = Uri.https(ApiConstant.baseUrl2 , ApiConstant.movieGenreApi ,
         {
           'api_key': '6b6055cc2c88703b542b7633d9d828a7'
 
@@ -106,12 +106,12 @@ class ApiManager{
 
   }
 
-  static Future<MovieDetailsResponse?> getMovieByGenreId(String genre_id)async{
-    Uri url = Uri.https(ApiConstant.baseUrl , ApiConstant.movieDetailsApi ,
+  static Future<MovieDetailsResponse?> getMovieByGenreId(String genreId)async{
+    Uri url = Uri.https(ApiConstant.baseUrl2 , ApiConstant.movieDetailsApi ,
         {
           'api_key':'6b6055cc2c88703b542b7633d9d828a7',
           'sort_by' : 'vote_count.desc',
-          'with_genres': genre_id
+          'with_genres': genreId
         });
 
     try{

@@ -42,7 +42,7 @@ class _BrowserTabState extends State<BrowserTab> {
           }
           else if(viewModel.genreList==null){
             return Center(child: CircularProgressIndicator(
-              color: Theme.of(context).primaryColor,));
+              color: Theme.of(context).canvasColor,));
           }
           else{
             return

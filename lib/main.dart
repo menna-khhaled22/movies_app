@@ -7,6 +7,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:movies_app/model/added_movie_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'Browser/browser_tab.dart';
+import 'Browser/movie/movie_details.dart';
 import 'Search/search_delegate_view_model.dart';
 import 'home/movie_details/movie_details_tab.dart';
 // import 'firebase_options.dart';
@@ -50,7 +52,9 @@ class _MyAppState extends State<MyApp> {
         MovieDetailsTab.routeName:(context) => MovieDetailsTab(),
         HomeScreen.routeName:(context) => HomeScreen(),
         WatchTab.routeName:(context) => WatchTab(),
-        SearchTab.routeName:(context)=> SearchTab()
+        SearchTab.routeName:(context)=> SearchTab(),
+        BrowserTab.routeName:(context) => BrowserTab(),
+        MovieDetails.routeName:(context) => MovieDetails(),
 },
     );
   }
