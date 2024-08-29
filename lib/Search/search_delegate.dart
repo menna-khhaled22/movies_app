@@ -43,7 +43,7 @@ class searchDelegate extends SearchDelegate {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-            Icon( Icons.movie_creation_outlined),
+              Image.asset("assets/movieIcon.png"),
               SizedBox(
                 height: 14,
               ),
