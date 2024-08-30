@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:movies/model/MovieDetailsResponse.dart';
-import '../../api/api_manager.dart';
 import 'package:movies_app/model/popular_response.dart';
+import '../../api/api_manager.dart';
+
 
 
 
@@ -18,7 +19,7 @@ class MovieDetailsViewModel extends ChangeNotifier{
         errorMessage= response?.status_message;
       }
       else{
-        moviesList = response?.results ;
+        moviesList = response?.results;
       }
     }
     catch(e){

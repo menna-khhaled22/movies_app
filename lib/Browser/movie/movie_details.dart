@@ -34,7 +34,7 @@ class _MovieDetailsState extends State<MovieDetails> {
     return  Scaffold(
       backgroundColor:MyTheme.primaryColor  ,
       appBar: AppBar(
-        title: Text(args?.name??""),
+        title: Text(args?.name??"" , style: Theme.of(context).textTheme.titleLarge!.copyWith(color: MyTheme.whiteColor),),
         backgroundColor:MyTheme.primaryColor,
         leading: BackButton(
           color: MyTheme.whiteColor,

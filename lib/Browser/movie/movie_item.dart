@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/home/movie_details/movie_details_tab.dart';
 // import '../../model/MovieDetailsResponse.dart';
-import 'package:movies_app/Model/popular_response.dart';
+import 'package:movies_app/model/popular_response.dart';
+import 'package:movies_app/my_theme_data.dart';
 
 
 class MovieItem extends StatelessWidget {
@@ -27,10 +28,10 @@ class MovieItem extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(child: Text(moviesList[index].title ??'', style: Theme.of(context).textTheme.titleMedium,),
+                  Container(child: Text(moviesList[index].title ??'', style: Theme.of(context).textTheme.titleMedium!.copyWith(color: MyTheme.whiteColor),),
                     width: MediaQuery.of(context).size.width*0.4,),
-                  Text('Rating :${moviesList[index].voteAverage}',style: Theme.of(context).textTheme.titleSmall,),
-                  Text('Released : ${moviesList[index].releaseDate}', style: Theme.of(context).textTheme.titleSmall,),
+                  Text('Rating :${moviesList[index].voteAverage}',style: Theme.of(context).textTheme.titleSmall!.copyWith(color: MyTheme.iconColor),),
+                  Text('Released : ${moviesList[index].releaseDate}', style: Theme.of(context).textTheme.titleSmall!.copyWith(color: MyTheme.iconColor),),
                 ],),
 
             ],
