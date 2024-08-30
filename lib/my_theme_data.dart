@@ -46,6 +46,6 @@ class MyTheme {
 
       appBarTheme: AppBarTheme(
         backgroundColor: greyColor,
-      )
+      ),
   );
 }

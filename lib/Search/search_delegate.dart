@@ -4,7 +4,6 @@ import 'package:movies_app/Search/searchItem.dart';
 import 'package:movies_app/Search/search_delegate_view_model.dart';
 import 'package:provider/provider.dart';
 
-import '../my_theme_data.dart';
 
 class searchDelegate extends SearchDelegate {
 
@@ -45,7 +44,7 @@ class searchDelegate extends SearchDelegate {
             children: [
               Image.asset("assets/images/movieIcon.png"),
               SizedBox(
-                height: 14,
+                height: MediaQuery.of(context).size.height*0.014
               ),
               Text(
                 "No movies found",
@@ -128,7 +127,7 @@ class searchDelegate extends SearchDelegate {
       inputDecorationTheme: InputDecorationTheme(
         border: InputBorder.none,
         hintStyle:
-        Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 18),
+        Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 18, color: MyTheme.iconColor),
       ),
     );
   }

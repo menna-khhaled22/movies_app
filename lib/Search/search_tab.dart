@@ -29,7 +29,7 @@ class SearchTab extends StatelessWidget {
             child: Row(
               children: [
                 Icon(Icons.search_rounded,color: MyTheme.iconColor,),
-                SizedBox(width: 10,),
+                SizedBox(width: MediaQuery.of(context).size.width*0.01),
                 Text("Search", style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 18, color: MyTheme.iconColor),textAlign: TextAlign.left,),
               ],
             ),
