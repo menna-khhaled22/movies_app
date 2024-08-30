@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:movies_app/model/PopularResponse.dart';
 import '../my_theme_data.dart';
 import '../model/added_movie_provider.dart';
 import 'package:movies_app/home/movie_item.dart';
@@ -57,7 +56,7 @@ class _WatchTabState extends State<WatchTab> {
                                     fontWeight: FontWeight.w500,
                                     fontSize: 15),
                               ),
-                              SizedBox(height: 10,),
+                              SizedBox(height: MediaQuery.of(context).size.height*0.01),
                               Text(provider.watchListMovie[index].releaseDate!,style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.iconColor,fontSize: 13),),
                               Text(provider.watchListMovie[index].originalLanguage!,style:Theme.of(context).textTheme.titleSmall!.copyWith(color:MyTheme.iconColor,fontSize: 13),)
                             ],
@@ -71,7 +70,7 @@ class _WatchTabState extends State<WatchTab> {
               separatorBuilder: (context, index) {
                 return Divider(
                   color: MyTheme.iconColor,
-                  height: 20,
+                  height: MediaQuery.of(context).size.height*0.02,
                   endIndent: 10,
                   indent: 10,
                   thickness: 0.8,

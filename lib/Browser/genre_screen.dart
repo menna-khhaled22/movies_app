@@ -19,7 +19,7 @@ class GenreScreen extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SizedBox(height: 30,),
+          SizedBox(height: MediaQuery.of(context).size.height*0.03),
           Text('Browse Category' ,style: Theme.of(context).textTheme.titleLarge!.copyWith(color: MyTheme.iconColor) ),
           Expanded(
             child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
